@@ -1,14 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
-  // Mobile menu toggle
-  const mobileMenuButton = document.getElementById("mobile-menu-button");
-  const mobileMenu = document.getElementById("mobile-menu");
+  // Load header and footer components
+  loadComponent('header-component', 'components/header.html');
+  loadComponent('footer-component', 'components/footer.html');
   
-  if (mobileMenuButton && mobileMenu) {
-    mobileMenuButton.addEventListener("click", function() {
-      mobileMenu.classList.toggle("hidden");
-    });
-  }
-
+  // Mobile menu toggle
+  setTimeout(() => {
+    const mobileMenuButton = document.getElementById("mobile-menu-button");
+    const mobileMenu = document.getElementById("mobile-menu");
+    
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener("click", function() {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+  }, 100);
+  
   // Smooth scrolling for navigation links
   const navLinks = document.querySelectorAll('a[href^="#"]');
   navLinks.forEach(link => {
@@ -20,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
       
       if (targetSection) {
         // Close mobile menu if open
+        const mobileMenu = document.getElementById("mobile-menu");
         if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
           mobileMenu.classList.add('hidden');
         }
@@ -31,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-
+  
   // Form submission handling
   const contactForms = document.querySelectorAll('form');
   contactForms.forEach(form => {
@@ -79,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
-
+  
   // View Details buttons for vehicles
   const vehicleButtons = document.querySelectorAll('#vehicles button, .vehicle-card button');
   vehicleButtons.forEach(button => {
@@ -90,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
       showNotification(`Showing details for ${vehicleName}`, 'info');
     });
   });
-
+  
   // View All buttons
   const viewAllButtons = document.querySelectorAll('button');
   viewAllButtons.forEach(button => {
@@ -101,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
-
+  
   // Download report buttons
   const downloadButtons = document.querySelectorAll('button');
   downloadButtons.forEach(button => {
@@ -114,7 +121,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
-
+  
   // Newsletter subscription
   const newsletterForms = document.querySelectorAll('form');
   newsletterForms.forEach(form => {
@@ -136,7 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
-
+  
   // Notification system
   function showNotification(message, type = 'info') {
     // Remove existing notifications
@@ -175,10 +182,10 @@ document.addEventListener('DOMContentLoaded', function() {
       setTimeout(() => notification.remove(), 300);
     }, 5000);
   }
-
+  
   // Active navigation highlighting
   const currentPath = window.location.pathname;
-  const navLinks = document.querySelectorAll('nav a');
+  // const navLinks = document.querySelectorAll('nav a');
   
   navLinks.forEach(link => {
     if (link.getAttribute('href') === currentPath.split('/').pop()) {
@@ -186,6 +193,56 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 
+  // Active navigation highlighting
+function highlightActivePage() {
+  const currentPath = window.location.pathname;
+  const pageName = currentPath.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('nav a');
+  
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    
+    // Remove existing active classes
+    link.classList.remove('font-bold', 'border-b-2', 'border-yellow-300');
+    
+    // Add active class to current page
+    if (href === pageName) {
+      link.classList.add('font-bold', 'border-b-2', 'border-yellow-300');
+    }
+  });
+}
+
+// Call after components are loaded
+setTimeout(() => {
+  highlightActivePage();
+}, 200);
+
+
+// Fix mobile menu after component loading
+function initializeMobileMenu() {
+  const mobileMenuButton = document.getElementById("mobile-menu-button");
+  const mobileMenu = document.getElementById("mobile-menu");
+  
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener("click", function() {
+      mobileMenu.classList.toggle("hidden");
+    });
+    
+    // Close mobile menu when clicking on a link
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', function() {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  }
+}
+
+// Call after components are loaded
+setTimeout(() => {
+  initializeMobileMenu();
+}, 200);
+  
   // Tab functionality for detail pages
   const tabs = document.querySelectorAll('[id$="-tab"]');
   if (tabs.length > 0) {
@@ -217,3 +274,18 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+
+// Function to load components
+async function loadComponent(componentId, filePath) {
+  try {
+    const response = await fetch(filePath);
+    if (!response.ok) throw new Error(`Failed to load ${filePath}`);
+    const html = await response.text();
+    const element = document.getElementById(componentId);
+    if (element) {
+      element.innerHTML = html;
+    }
+  } catch (error) {
+    console.error(`Error loading component ${componentId}:`, error);
+  }
+}
