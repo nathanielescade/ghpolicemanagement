@@ -32,16 +32,16 @@
 </head>
 <body class="bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200 text-blue-900 min-h-screen flex flex-col">
   <!-- Header Component -->
-<div id="header-component"></div>
-
-  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 space-y-12 sm:space-y-16">
+  <div id="header-component"></div>
+  
+  <main class="flex-grow w-full">
     <!-- Hero Section Component -->
-    <section class="relative bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row items-center md:items-stretch">
-      <div class="md:w-1/2 p-6 sm:p-10 flex flex-col justify-center space-y-6">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-blue-900 leading-tight">
+    <section class="relative bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row items-center md:items-stretch mx-4 my-4 md:mx-0 md:my-0">
+      <div class="md:w-1/2 p-4 sm:p-6 md:p-10 flex flex-col justify-center space-y-4 sm:space-y-6">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-blue-900 leading-tight">
           Empowering Ghana's Police Force with Next-Gen Management
         </h2>
-        <p class="text-blue-800 text-base sm:text-lg leading-relaxed">
+        <p class="text-blue-800 text-sm sm:text-base md:text-lg leading-relaxed">
           A comprehensive, secure, and intelligent system designed to streamline
           police operations, enhance transparency, and improve public safety
           across Ghana's police stations.
@@ -56,16 +56,16 @@
         </div>
       </div>
       <div class="md:w-1/2 relative">
-        <img alt="Ghana Police officers collaborating" class="w-full h-64 md:h-full object-cover rounded-r-3xl hero-image" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c79cfab4-bb8c-4374-1022-b81273beb7ff.jpg" width="600">
+        <img alt="Ghana Police officers collaborating" class="w-full h-48 md:h-full object-cover rounded-r-3xl hero-image" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c79cfab4-bb8c-4374-1022-b81273beb7ff.jpg" width="600">
         <div class="absolute top-6 left-6 bg-sea-blue-700 bg-opacity-80 text-white px-4 py-2 rounded-lg font-semibold shadow-lg flex items-center space-x-2">
           <i class="fas fa-shield-alt fa-lg"></i>
           <span>Trusted & Secure</span>
         </div>
       </div>
     </section>
-
+    
     <!-- Key Features Section -->
-    <section class="space-y-8">
+    <section class="space-y-8 px-4 my-8 md:px-0 md:my-12">
       <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 border-b-4 border-sea-blue-700 inline-block pb-2">
         Key Features of Our System
       </h3>
@@ -114,9 +114,9 @@
         </div>
       </div>
     </section>
-
+    
     <!-- Officers Preview Section -->
-    <section class="space-y-8">
+    <section class="space-y-8 px-4 my-8 md:px-0 md:my-12">
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
         <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 border-b-4 border-sea-blue-700 inline-block pb-2">
           Featured Officers
@@ -184,9 +184,9 @@
         </article>
       </div>
     </section>
-
+    
     <!-- Cases Preview Section -->
-    <section class="space-y-8">
+    <section class="space-y-8 px-4 my-8 md:px-0 md:my-12">
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
         <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 border-b-4 border-blue-600 inline-block pb-2">
           Recent Cases
@@ -199,54 +199,54 @@
         <table class="min-w-full divide-y divide-blue-200 text-left">
           <thead class="bg-blue-400 text-blue-900 font-semibold">
             <tr>
-              <th class="px-6 py-3" scope="col">Case ID</th>
-              <th class="px-6 py-3" scope="col">Title</th>
-              <th class="px-6 py-3" scope="col">Status</th>
-              <th class="px-6 py-3" scope="col">Priority</th>
-              <th class="px-6 py-3" scope="col">Actions</th>
+              <th class="px-4 py-3 sm:px-6" scope="col">Case ID</th>
+              <th class="px-4 py-3 sm:px-6" scope="col">Title</th>
+              <th class="px-4 py-3 sm:px-6 hidden sm:table-cell" scope="col">Status</th>
+              <th class="px-4 py-3 sm:px-6 hidden sm:table-cell" scope="col">Priority</th>
+              <th class="px-4 py-3 sm:px-6" scope="col">Actions</th>
             </tr>
           </thead>
           <tbody class="divide-y divide-blue-200">
             <tr class="hover:bg-blue-50 transition">
-              <td class="px-6 py-4 font-mono text-sm text-blue-700">C-20240601-001</td>
-              <td class="px-6 py-4 font-semibold text-blue-900">Robbery at Accra Mall</td>
-              <td class="px-6 py-4">
+              <td class="px-4 py-4 sm:px-6 font-mono text-sm text-blue-700">C-20240601-001</td>
+              <td class="px-4 py-4 sm:px-6 font-semibold text-blue-900">Robbery at Accra Mall</td>
+              <td class="px-4 py-4 sm:px-6 hidden sm:table-cell">
                 <span class="status-badge status-open">Open</span>
               </td>
-              <td class="px-6 py-4">
+              <td class="px-4 py-4 sm:px-6 hidden sm:table-cell">
                 <span class="status-badge priority-high">High</span>
               </td>
-              <td class="px-6 py-4">
+              <td class="px-4 py-4 sm:px-6">
                 <a href="case-detail.html?id=C-20240601-001" class="text-blue-600 hover:text-blue-800">
                   <i class="fas fa-eye"></i> View
                 </a>
               </td>
             </tr>
             <tr class="hover:bg-blue-50 transition">
-              <td class="px-6 py-4 font-mono text-sm text-blue-700">C-20240602-002</td>
-              <td class="px-6 py-4 font-semibold text-blue-900">Traffic Accident on Tema Highway</td>
-              <td class="px-6 py-4">
+              <td class="px-4 py-4 sm:px-6 font-mono text-sm text-blue-700">C-20240602-002</td>
+              <td class="px-4 py-4 sm:px-6 font-semibold text-blue-900">Traffic Accident on Tema Highway</td>
+              <td class="px-4 py-4 sm:px-6 hidden sm:table-cell">
                 <span class="status-badge status-progress">In Progress</span>
               </td>
-              <td class="px-6 py-4">
+              <td class="px-4 py-4 sm:px-6 hidden sm:table-cell">
                 <span class="status-badge priority-medium">Medium</span>
               </td>
-              <td class="px-6 py-4">
+              <td class="px-4 py-4 sm:px-6">
                 <a href="case-detail.html?id=C-20240602-002" class="text-blue-600 hover:text-blue-800">
                   <i class="fas fa-eye"></i> View
                 </a>
               </td>
             </tr>
             <tr class="hover:bg-blue-50 transition">
-              <td class="px-6 py-4 font-mono text-sm text-blue-700">C-20240603-003</td>
-              <td class="px-6 py-4 font-semibold text-blue-900">Burglary in Kumasi Suburb</td>
-              <td class="px-6 py-4">
+              <td class="px-4 py-4 sm:px-6 font-mono text-sm text-blue-700">C-20240603-003</td>
+              <td class="px-4 py-4 sm:px-6 font-semibold text-blue-900">Burglary in Kumasi Suburb</td>
+              <td class="px-4 py-4 sm:px-6 hidden sm:table-cell">
                 <span class="status-badge status-closed">Closed</span>
               </td>
-              <td class="px-6 py-4">
+              <td class="px-4 py-4 sm:px-6 hidden sm:table-cell">
                 <span class="status-badge priority-low">Low</span>
               </td>
-              <td class="px-6 py-4">
+              <td class="px-4 py-4 sm:px-6">
                 <a href="case-detail.html?id=C-20240603-003" class="text-blue-600 hover:text-blue-800">
                   <i class="fas fa-eye"></i> View
                 </a>
@@ -256,9 +256,9 @@
         </table>
       </div>
     </section>
-
+    
     <!-- Fleet Preview Section -->
-    <section class="space-y-8">
+    <section class="space-y-8 px-4 my-8 md:px-0 md:my-12">
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
         <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 border-b-4 border-sea-blue-800 inline-block pb-2">
           Fleet Overview
@@ -303,9 +303,9 @@
         </div>
       </div>
     </section>
-
+    
     <!-- Reports Preview Section -->
-    <section class="space-y-8">
+    <section class="space-y-8 px-4 my-8 md:px-0 md:my-12">
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
         <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 border-b-4 border-sea-blue-700 inline-block pb-2">
           Reports & Analytics
@@ -315,25 +315,25 @@
         </a>
       </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="bg-white rounded-3xl shadow-2xl p-8 flex flex-col">
-          <h4 class="text-2xl font-semibold text-blue-900 mb-6">Crime Rate Trends (Last 6 Months)</h4>
-          <img alt="Line chart showing crime rate trends" class="rounded-xl shadow-lg" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3ba9c836-bb5d-4da6-d8ad-bb06a5b7e9a7.jpg" width="600">
+        <div class="bg-white rounded-3xl shadow-2xl p-6 sm:p-8 flex flex-col">
+          <h4 class="text-xl sm:text-2xl font-semibold text-blue-900 mb-6">Crime Rate Trends (Last 6 Months)</h4>
+          <img alt="Line chart showing crime rate trends" class="rounded-xl shadow-lg w-full h-auto" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3ba9c836-bb5d-4da6-d8ad-bb06a5b7e9a7.jpg" width="600">
           <div class="mt-4 text-center">
             <a href="report-detail.html?id=crime-trends" class="text-blue-600 hover:text-blue-800 font-medium">View Full Report</a>
           </div>
         </div>
-        <div class="bg-white rounded-3xl shadow-2xl p-8 flex flex-col">
-          <h4 class="text-2xl font-semibold text-blue-900 mb-6">Case Resolution Rates by Region</h4>
-          <img alt="Bar chart showing case resolution rates" class="rounded-xl shadow-lg" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5e009176-94ad-4d2f-7d68-d4deea0b9bde.jpg" width="600">
+        <div class="bg-white rounded-3xl shadow-2xl p-6 sm:p-8 flex flex-col">
+          <h4 class="text-xl sm:text-2xl font-semibold text-blue-900 mb-6">Case Resolution Rates by Region</h4>
+          <img alt="Bar chart showing case resolution rates" class="rounded-xl shadow-lg w-full h-auto" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5e009176-94ad-4d2f-7d68-d4deea0b9bde.jpg" width="600">
           <div class="mt-4 text-center">
             <a href="report-detail.html?id=resolution-rates" class="text-blue-600 hover:text-blue-800 font-medium">View Full Report</a>
           </div>
         </div>
       </div>
     </section>
-
+    
     <!-- Blog Preview Section -->
-    <section class="space-y-8">
+    <section class="space-y-8 px-4 my-8 md:px-0 md:my-12">
       <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
         <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 border-b-4 border-sea-blue-700 inline-block pb-2">
           Latest News & Updates
@@ -384,32 +384,32 @@
         </article>
       </div>
     </section>
-
+    
     <!-- Statistics Section -->
-    <section class="bg-white rounded-3xl shadow-2xl p-6 sm:p-10">
+    <section class="bg-white rounded-3xl shadow-2xl p-6 sm:p-10 mx-4 my-8 md:mx-0 md:my-12">
       <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 mb-8 text-center">System Impact</h3>
       <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
         <div class="text-center">
-          <p class="text-4xl font-bold text-sea-blue-700">4</p>
+          <p class="text-3xl sm:text-4xl font-bold text-sea-blue-700">4</p>
           <p class="text-blue-700 mt-2">Police Stations</p>
         </div>
         <div class="text-center">
-          <p class="text-4xl font-bold text-sea-blue-700">500+</p>
+          <p class="text-3xl sm:text-4xl font-bold text-sea-blue-700">500+</p>
           <p class="text-blue-700 mt-2">Officers Managed</p>
         </div>
         <div class="text-center">
-          <p class="text-4xl font-bold text-sea-blue-700">1200+</p>
+          <p class="text-3xl sm:text-4xl font-bold text-sea-blue-700">1200+</p>
           <p class="text-blue-700 mt-2">Cases Tracked</p>
         </div>
         <div class="text-center">
-          <p class="text-4xl font-bold text-sea-blue-700">85%</p>
+          <p class="text-3xl sm:text-4xl font-bold text-sea-blue-700">85%</p>
           <p class="text-blue-700 mt-2">Efficiency Increase</p>
         </div>
       </div>
     </section>
-
+    
     <!-- Testimonials Section -->
-    <section class="space-y-8">
+    <section class="space-y-8 px-4 my-8 md:px-0 md:my-12">
       <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 border-b-4 border-sea-blue-700 inline-block pb-2">
         What Our Officers Say
       </h3>
@@ -451,10 +451,10 @@
       </div>
     </section>
   </main>
-
+  
   <!-- Footer Component -->
-<div id="footer-component"></div>
-
+  <div id="footer-component"></div>
+  
   <!-- JavaScript File -->
   <script src="app.js"></script>
 </body>
