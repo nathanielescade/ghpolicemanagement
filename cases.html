@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Active Cases | Ghana Police Management System</title>
+  <meta name="description" content="Track active police cases in Ghana. View case details, status updates, and assigned officers. Stay informed about ongoing investigations.">
+  <meta name="keywords" content="Ghana Police Cases, Active Investigations, Crime Tracking, Case Management, Law Enforcement">
+  <meta name="author" content="Ghana Police Service">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ghanapolice.gov.gh/cases.html">
+  <meta property="og:title" content="Active Cases | Ghana Police Management System">
+  <meta property="og:description" content="Track active police cases in Ghana. View case details, status updates, and assigned officers. Stay informed about ongoing investigations.">
+  <meta property="og:image" content="https://storage.googleapis.com/a1aa/image/c79cfab4-bb8c-4374-1022-b81273beb7ff.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ghanapolice.gov.gh/cases.html">
+  <meta property="twitter:title" content="Active Cases | Ghana Police Management System">
+  <meta property="twitter:description" content="Track active police cases in Ghana. View case details, status updates, and assigned officers. Stay informed about ongoing investigations.">
+  <meta property="twitter:image" content="https://storage.googleapis.com/a1aa/image/c79cfab4-bb8c-4374-1022-b81273beb7ff.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://storage.googleapis.com/a1aa/image/dbfe0756-4da8-441d-4360-65dca78b4182.jpg" type="image/x-icon">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200 text-blue-900 min-h-screen flex flex-col">
+  <!-- Header Component (same as index.html) -->
+  <header id="header" class="bg-gradient-to-r from-sea-blue-700 via-blue-600 to-sea-blue-800 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img alt="Logo of Ghana Police Service" class="w-12 h-12 rounded-full border-2 border-white" height="48" src="https://storage.googleapis.com/a1aa/image/dbfe0756-4da8-441d-4360-65dca78b4182.jpg" width="48">
+        <h1 class="text-white font-extrabold text-xl sm:text-2xl tracking-wide select-none">
+          Ghana Police Management System
+        </h1>
+      </div>
+      <nav class="hidden md:flex space-x-6 lg:space-x-8 text-white font-semibold">
+        <a class="hover:underline hover:text-yellow-300 transition" href="index.html">Home</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="officers.html">Officers</a>
+        <a class="hover:underline hover:text-yellow-300 transition font-bold border-b-2 border-yellow-300" href="cases.html">Cases</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="fleet.html">Fleet</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="reports.html">Reports</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="about.html">About</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="blog.html">Blog</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="contact.html">Contact</a>
+      </nav>
+      <button aria-label="Toggle menu" class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-yellow-300" id="mobile-menu-button">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+    </div>
+    <nav class="md:hidden bg-gradient-to-r from-sea-blue-700 via-blue-600 to-sea-blue-800 px-6 py-4 space-y-3 hidden" id="mobile-menu">
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="index.html">Home</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="officers.html">Officers</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition font-bold border-b-2 border-yellow-300" href="cases.html">Cases</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="fleet.html">Fleet</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="reports.html">Reports</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="about.html">About</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="blog.html">Blog</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 space-y-12 sm:space-y-16">
+    <!-- Page Header -->
+    <section class="text-center">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-900 mb-4">Active Cases</h1>
+      <p class="text-lg text-blue-800 max-w-3xl mx-auto">Track ongoing police investigations across Ghana. View case details, status updates, and assigned officers.</p>
+    </section>
+
+    <!-- Case Statistics -->
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-white rounded-xl shadow-lg p-4 text-center">
+        <p class="text-3xl font-bold text-green-600">248</p>
+        <p class="text-blue-700 mt-1">Open Cases</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-4 text-center">
+        <p class="text-3xl font-bold text-yellow-600">156</p>
+        <p class="text-blue-700 mt-1">In Progress</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-4 text-center">
+        <p class="text-3xl font-bold text-red-600">42</p>
+        <p class="text-blue-700 mt-1">High Priority</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-4 text-center">
+        <p class="text-3xl font-bold text-sea-blue-700">89%</p>
+        <p class="text-blue-700 mt-1">Resolution Rate</p>
+      </div>
+    </section>
+
+    <!-- Search and Filter Section -->
+    <section class="bg-white rounded-3xl shadow-2xl p-6">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+        <div class="relative w-full md:w-1/3">
+          <input type="text" placeholder="Search cases by ID, title, or officer..." class="w-full rounded-lg border border-blue-300 bg-white py-3 px-4 pl-10 text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+          <i class="fas fa-search absolute left-3 top-1/2 transform -translate-y-1/2 text-blue-400"></i>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <select class="rounded-lg border border-blue-300 bg-white py-2 px-4 text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option>All Statuses</option>
+            <option>Open</option>
+            <option>In Progress</option>
+            <option>Closed</option>
+          </select>
+          <select class="rounded-lg border border-blue-300 bg-white py-2 px-4 text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option>All Priorities</option>
+            <option>High</option>
+            <option>Medium</option>
+            <option>Low</option>
+          </select>
+          <select class="rounded-lg border border-blue-300 bg-white py-2 px-4 text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option>All Regions</option>
+            <option>Accra</option>
+            <option>Kumasi</option>
+            <option>Takoradi</option>
+            <option>Cape Coast</option>
+            <option>Tamale</option>
+            <option>Ho</option>
+            <option>Sunyani</option>
+            <option>Obuasi</option>
+            <option>Wa</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <p class="text-blue-700">Showing <span class="font-semibold">9</span> of <span class="font-semibold">446</span> cases</p>
+      </div>
+    </section>
+
+    <!-- Cases Table -->
+    <section class="space-y-8">
+      <div class="overflow-x-auto rounded-lg shadow-lg bg-white">
+        <table class="min-w-full divide-y divide-blue-200 text-left">
+          <thead class="bg-blue-400 text-blue-900 font-semibold">
+            <tr>
+              <th class="px-4 py-3 text-sm sm:text-base" scope="col">Case ID</th>
+              <th class="px-4 py-3 text-sm sm:text-base" scope="col">Title</th>
+              <th class="px-4 py-3 text-sm sm:text-base hidden sm:table-cell" scope="col">Status</th>
+              <th class="px-4 py-3 text-sm sm:text-base hidden md:table-cell" scope="col">Assigned Officer</th>
+              <th class="px-4 py-3 text-sm sm:text-base hidden lg:table-cell" scope="col">Date Reported</th>
+              <th class="px-4 py-3 text-sm sm:text-base" scope="col">Priority</th>
+              <th class="px-4 py-3 text-sm sm:text-base" scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-blue-200">
+            <tr class="case-row hover:bg-blue-50 transition">
+              <td class="px-4 py-3 font-mono text-sm text-blue-700">C-20240601-001</td>
+              <td class="px-4 py-3 font-semibold text-blue-900">Robbery at Accra Mall</td>
+              <td class="px-4 py-3 hidden sm:table-cell">
+                <span class="status-badge status-open">Open</span>
+              </td>
+              <td class="px-4 py-3 hidden md:table-cell">Kwame Mensah</td>
+              <td class="px-4 py-3 hidden lg:table-cell">2024-06-01</td>
+              <td class="px-4 py-3">
+                <span class="status-badge priority-high">High</span>
+              </td>
+              <td class="px-4 py-3">
+                <button class="text-blue-600 hover:text-blue-800">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </td>
+            </tr>
+            <tr class="case-row hover:bg-blue-50 transition">
+              <td class="px-4 py-3 font-mono text-sm text-blue-700">C-20240602-002</td>
+              <td class="px-4 py-3 font-semibold text-blue-900">Traffic Accident on Tema Highway</td>
+              <td class="px-4 py-3 hidden sm:table-cell">
+                <span class="status-badge status-progress">In Progress</span>
+              </td>
+              <td class="px-4 py-3 hidden md:table-cell">Abena Owusu</td>
+              <td class="px-4 py-3 hidden lg:table-cell">2024-06-02</td>
+              <td class="px-4 py-3">
+                <span class="status-badge priority-medium">Medium</span>
+              </td>
+              <td class="px-4 py-3">
+                <button class="text-blue-600 hover:text-blue-800">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </td>
+            </tr>
+            <tr class="case-row hover:bg-blue-50 transition">
+              <td class="px-4 py-3 font-mono text-sm text-blue-700">C-20240603-003</td>
+              <td class="px-4 py-3 font-semibold text-blue-900">Burglary in Kumasi Suburb</td>
+              <td class="px-4 py-3 hidden sm:table-cell">
+                <span class="status-badge status-closed">Closed</span>
+              </td>
+              <td class="px-4 py-3 hidden md:table-cell">Yaw Boateng</td>
+              <td class="px-4 py-3 hidden lg:table-cell">2024-06-03</td>
+              <td class="px-4 py-3">
+                <span class="status-badge priority-low">Low</span>
+              </td>
+              <td class="px-4 py-3">
+                <button class="text-blue-600 hover:text-blue-800">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </td>
+            </tr>
+            <tr class="case-row hover:bg-blue-50 transition">
+              <td class="px-4 py-3 font-mono text-sm text-blue-700">C-20240604-004</td>
+              <td class="px-4 py-3 font-semibold text-blue-900">Cybercrime Investigation</td>
+              <td class="px-4 py-3 hidden sm:table-cell">
+                <span class="status-badge status-progress">In Progress</span>
+              </td>
+              <td class="px-4 py-3 hidden md:table-cell">Esi Adjei</td>
+              <td class="px-4 py-3 hidden lg:table-cell">2024-06-04</td>
+              <td class="px-4 py-3">
+                <span class="status-badge priority-medium">Medium</span>
+              </td>
+              <td class="px-4 py-3">
+                <button class="text-blue-600 hover:text-blue-800">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </td>
+            </tr>
+            <tr class="case-row hover:bg-blue-50 transition">
+              <td class="px-4 py-3 font-mono text-sm text-blue-700">C-20240605-005</td>
+              <td class="px-4 py-3 font-semibold text-blue-900">Illegal Mining Crackdown</td>
+              <td class="px-4 py-3 hidden sm:table-cell">
+                <span class="status-badge status-open">Open</span>
+              </td>
+              <td class="px-4 py-3 hidden md:table-cell">Kojo Annan</td>
+              <td class="px-4 py-3 hidden lg:table-cell">2024-06-05</td>
+              <td class="px-4 py-3">
+                <span class="status-badge priority-high">High</span>
+              </td>
+              <td class="px-4 py-3">
+                <button class="text-blue-600 hover:text-blue-800">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </td>
+            </tr>
+            <tr class="case-row hover:bg-blue-50 transition">
+              <td class="px-4 py-3 font-mono text-sm text-blue-700">C-20240606-006</td>
+              <td class="px-4 py-3 font-semibold text-blue-900">Domestic Violence Report</td>
+              <td class="px-4 py-3 hidden sm:table-cell">
+                <span class="status-badge status-progress">In Progress</span>
+              </td>
+              <td class="px-4 py-3 hidden md:table-cell">Ama Boateng</td>
+              <td class="px-4 py-3 hidden lg:table-cell">2024-06-06</td>
+              <td class="px-4 py-3">
+                <span class="status-badge priority-medium">Medium</span>
+              </td>
+              <td class="px-4 py-3">
+                <button class="text-blue-600 hover:text-blue-800">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </td>
+            </tr>
+            <tr class="case-row hover:bg-blue-50 transition">
+              <td class="px-4 py-3 font-mono text-sm text-blue-700">C-20240607-007</td>
+              <td class="px-4 py-3 font-semibold text-blue-900">Drug Trafficking Arrest</td>
+              <td class="px-4 py-3 hidden sm:table-cell">
+                <span class="status-badge status-open">Open</span>
+              </td>
+              <td class="px-4 py-3 hidden md:table-cell">Nana Kwabena</td>
+              <td class="px-4 py-3 hidden lg:table-cell">2024-06-07</td>
+              <td class="px-4 py-3">
+                <span class="status-badge priority-high">High</span>
+              </td>
+              <td class="px-4 py-3">
+                <button class="text-blue-600 hover:text-blue-800">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </td>
+            </tr>
+            <tr class="case-row hover:bg-blue-50 transition">
+              <td class="px-4 py-3 font-mono text-sm text-blue-700">C-20240608-008</td>
+              <td class="px-4 py-3 font-semibold text-blue-900">Traffic Violation Enforcement</td>
+              <td class="px-4 py-3 hidden sm:table-cell">
+                <span class="status-badge status-progress">In Progress</span>
+              </td>
+              <td class="px-4 py-3 hidden md:table-cell">Adwoa Mensah</td>
+              <td class="px-4 py-3 hidden lg:table-cell">2024-06-08</td>
+              <td class="px-4 py-3">
+                <span class="status-badge priority-medium">Medium</span>
+              </td>
+              <td class="px-4 py-3">
+                <button class="text-blue-600 hover:text-blue-800">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </td>
+            </tr>
+            <tr class="case-row hover:bg-blue-50 transition">
+              <td class="px-4 py-3 font-mono text-sm text-blue-700">C-20240609-009</td>
+              <td class="px-4 py-3 font-semibold text-blue-900">Public Disturbance Control</td>
+              <td class="px-4 py-3 hidden sm:table-cell">
+                <span class="status-badge status-open">Open</span>
+              </td>
+              <td class="px-4 py-3 hidden md:table-cell">Kwesi Appiah</td>
+              <td class="px-4 py-3 hidden lg:table-cell">2024-06-09</td>
+              <td class="px-4 py-3">
+                <span class="status-badge priority-medium">Medium</span>
+              </td>
+              <td class="px-4 py-3">
+                <button class="text-blue-600 hover:text-blue-800">
+                  <i class="fas fa-eye"></i>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      
+      <!-- Pagination -->
+      <div class="flex justify-center items-center space-x-2">
+        <button class="px-4 py-2 rounded-lg bg-white text-blue-900 font-medium shadow hover:bg-blue-50 transition disabled:opacity-50" disabled>
+          <i class="fas fa-chevron-left mr-2"></i> Previous
+        </button>
+        <button class="px-4 py-2 rounded-lg bg-sea-blue-700 text-white font-medium shadow">1</button>
+        <button class="px-4 py-2 rounded-lg bg-white text-blue-900 font-medium shadow hover:bg-blue-50 transition">2</button>
+        <button class="px-4 py-2 rounded-lg bg-white text-blue-900 font-medium shadow hover:bg-blue-50 transition">3</button>
+        <span class="px-2">...</span>
+        <button class="px-4 py-2 rounded-lg bg-white text-blue-900 font-medium shadow hover:bg-blue-50 transition">50</button>
+        <button class="px-4 py-2 rounded-lg bg-white text-blue-900 font-medium shadow hover:bg-blue-50 transition">
+          Next <i class="fas fa-chevron-right ml-2"></i>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Component (same as index.html) -->
+  <footer class="bg-blue-900 text-blue-200 py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Ghana Police Management System</h4>
+          <p class="text-sm">Empowering Ghana's Police Force with Next-Gen Management</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-sm hover:text-yellow-300 transition">Home</a></li>
+            <li><a href="officers.html" class="text-sm hover:text-yellow-300 transition">Officers</a></li>
+            <li><a href="cases.html" class="text-sm hover:text-yellow-300 transition">Cases</a></li>
+            <li><a href="fleet.html" class="text-sm hover:text-yellow-300 transition">Fleet</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="about.html" class="text-sm hover:text-yellow-300 transition">About Us</a></li>
+            <li><a href="blog.html" class="text-sm hover:text-yellow-300 transition">Blog</a></li>
+            <li><a href="reports.html" class="text-sm hover:text-yellow-300 transition">Reports</a></li>
+            <li><a href="contact.html" class="text-sm hover:text-yellow-300 transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Connect With Us</h4>
+          <div class="flex space-x-4 text-yellow-400">
+            <a aria-label="Facebook" class="hover:text-yellow-300 transition" href="https://www.facebook.com/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a aria-label="Twitter" class="hover:text-yellow-300 transition" href="https://twitter.com/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a aria-label="LinkedIn" class="hover:text-yellow-300 transition" href="https://www.linkedin.com/company/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+            <a aria-label="Instagram" class="hover:text-yellow-300 transition" href="https://www.instagram.com/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-blue-800 mt-8 pt-6 text-center">
+        <p class="text-sm">© 2024 Ghana Police Management System. All rights reserved.</p>
+        <p class="text-xs mt-2 text-blue-400">Designed and developed for the Ghana Police Service</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>

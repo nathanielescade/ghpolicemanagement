@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reports & Analytics | Ghana Police Management System</title>
+  <meta name="description" content="Access comprehensive reports and analytics from the Ghana Police Management System. View crime statistics, performance metrics, and operational insights.">
+  <meta name="keywords" content="Ghana Police Reports, Crime Statistics, Police Analytics, Performance Metrics, Law Enforcement Data">
+  <meta name="author" content="Ghana Police Service">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ghanapolice.gov.gh/reports.html">
+  <meta property="og:title" content="Reports & Analytics | Ghana Police Management System">
+  <meta property="og:description" content="Access comprehensive reports and analytics from the Ghana Police Management System. View crime statistics, performance metrics, and operational insights.">
+  <meta property="og:image" content="https://storage.googleapis.com/a1aa/image/3ba9c836-bb5d-4da6-d8ad-bb06a5b7e9a7.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ghanapolice.gov.gh/reports.html">
+  <meta property="twitter:title" content="Reports & Analytics | Ghana Police Management System">
+  <meta property="twitter:description" content="Access comprehensive reports and analytics from the Ghana Police Management System. View crime statistics, performance metrics, and operational insights.">
+  <meta property="twitter:image" content="https://storage.googleapis.com/a1aa/image/3ba9c836-bb5d-4da6-d8ad-bb06a5b7e9a7.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://storage.googleapis.com/a1aa/image/dbfe0756-4da8-441d-4360-65dca78b4182.jpg" type="image/x-icon">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200 text-blue-900 min-h-screen flex flex-col">
+  <!-- Header Component (same as index.html) -->
+  <header id="header" class="bg-gradient-to-r from-sea-blue-700 via-blue-600 to-sea-blue-800 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img alt="Logo of Ghana Police Service" class="w-12 h-12 rounded-full border-2 border-white" height="48" src="https://storage.googleapis.com/a1aa/image/dbfe0756-4da8-441d-4360-65dca78b4182.jpg" width="48">
+        <h1 class="text-white font-extrabold text-xl sm:text-2xl tracking-wide select-none">
+          Ghana Police Management System
+        </h1>
+      </div>
+      <nav class="hidden md:flex space-x-6 lg:space-x-8 text-white font-semibold">
+        <a class="hover:underline hover:text-yellow-300 transition" href="index.html">Home</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="officers.html">Officers</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="cases.html">Cases</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="fleet.html">Fleet</a>
+        <a class="hover:underline hover:text-yellow-300 transition font-bold border-b-2 border-yellow-300" href="reports.html">Reports</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="about.html">About</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="blog.html">Blog</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="contact.html">Contact</a>
+      </nav>
+      <button aria-label="Toggle menu" class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-yellow-300" id="mobile-menu-button">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+    </div>
+    <nav class="md:hidden bg-gradient-to-r from-sea-blue-700 via-blue-600 to-sea-blue-800 px-6 py-4 space-y-3 hidden" id="mobile-menu">
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="index.html">Home</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="officers.html">Officers</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="cases.html">Cases</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="fleet.html">Fleet</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition font-bold border-b-2 border-yellow-300" href="reports.html">Reports</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="about.html">About</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="blog.html">Blog</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 space-y-12 sm:space-y-16">
+    <!-- Page Header -->
+    <section class="text-center">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-900 mb-4">Reports & Analytics</h1>
+      <p class="text-lg text-blue-800 max-w-3xl mx-auto">Access comprehensive reports and analytics to gain insights into police operations, crime trends, and performance metrics.</p>
+    </section>
+
+    <!-- Key Performance Indicators -->
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-white rounded-xl shadow-lg p-4 text-center">
+        <p class="text-3xl font-bold text-green-600">87%</p>
+        <p class="text-blue-700 mt-1">Case Resolution Rate</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-4 text-center">
+        <p class="text-3xl font-bold text-yellow-600">24h</p>
+        <p class="text-blue-700 mt-1">Avg Response Time</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-4 text-center">
+        <p class="text-3xl font-bold text-sea-blue-700">92%</p>
+        <p class="text-blue-700 mt-1">Public Satisfaction</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg p-4 text-center">
+        <p class="text-3xl font-bold text-purple-600">15%</p>
+        <p class="text-blue-700 mt-1">Crime Reduction</p>
+      </div>
+    </section>
+
+    <!-- Report Filters -->
+    <section class="bg-white rounded-3xl shadow-2xl p-6">
+      <h2 class="text-2xl font-bold text-blue-900 mb-6">Generate Custom Report</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div>
+          <label class="block mb-2 font-semibold text-blue-900">Report Type</label>
+          <select class="w-full rounded-lg border border-blue-300 bg-white py-2 px-4 text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option>Crime Statistics</option>
+            <option>Case Resolution</option>
+            <option>Officer Performance</option>
+            <option>Fleet Utilization</option>
+            <option>Public Satisfaction</option>
+          </select>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold text-blue-900">Time Period</label>
+          <select class="w-full rounded-lg border border-blue-300 bg-white py-2 px-4 text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option>Last 7 Days</option>
+            <option>Last 30 Days</option>
+            <option>Last 3 Months</option>
+            <option>Last 6 Months</option>
+            <option>Last Year</option>
+            <option>Custom Range</option>
+          </select>
+        </div>
+        <div>
+          <label class="block mb-2 font-semibold text-blue-900">Region</label>
+          <select class="w-full rounded-lg border border-blue-300 bg-white py-2 px-4 text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <option>All Regions</option>
+            <option>Accra</option>
+            <option>Kumasi</option>
+            <option>Takoradi</option>
+            <option>Cape Coast</option>
+            <option>Tamale</option>
+            <option>Ho</option>
+            <option>Sunyani</option>
+            <option>Obuasi</option>
+            <option>Wa</option>
+          </select>
+        </div>
+        <div class="flex items-end">
+          <button class="w-full bg-sea-blue-700 hover:bg-sea-blue-800 text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition">
+            Generate Report
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Crime Rate Trends -->
+    <section class="bg-white rounded-3xl shadow-2xl p-6">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
+        <h2 class="text-2xl font-bold text-blue-900">Crime Rate Trends</h2>
+        <div class="mt-2 sm:mt-0">
+          <div class="flex items-center space-x-2">
+            <span class="text-sm font-medium text-blue-700">Period:</span>
+            <select class="rounded-lg border border-blue-300 bg-white py-1 px-2 text-sm text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option>Last 6 Months</option>
+              <option>Last 3 Months</option>
+              <option>Last Month</option>
+              <option>Custom Range</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="bg-blue-50 rounded-xl p-4 h-80 flex items-center justify-center">
+        <img alt="Line chart showing crime rate trends" class="max-h-full max-w-full object-contain" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3ba9c836-bb5d-4da6-d8ad-bb06a5b7e9a7.jpg" width="600">
+      </div>
+      <div class="mt-4 text-center">
+        <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition">
+          Download Full Report
+        </button>
+      </div>
+    </section>
+
+    <!-- Case Resolution Rates -->
+    <section class="bg-white rounded-3xl shadow-2xl p-6">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-6">
+        <h2 class="text-2xl font-bold text-blue-900">Case Resolution Rates by Region</h2>
+        <div class="mt-2 sm:mt-0">
+          <div class="flex items-center space-x-2">
+            <span class="text-sm font-medium text-blue-700">Period:</span>
+            <select class="rounded-lg border border-blue-300 bg-white py-1 px-2 text-sm text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <option>Last 6 Months</option>
+              <option>Last 3 Months</option>
+              <option>Last Month</option>
+              <option>Custom Range</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="bg-blue-50 rounded-xl p-4 h-80 flex items-center justify-center">
+        <img alt="Bar chart showing case resolution rates" class="max-h-full max-w-full object-contain" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5e009176-94ad-4d2f-7d68-d4deea0b9bde.jpg" width="600">
+      </div>
+      <div class="mt-4 text-center">
+        <button class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition">
+          Download Full Report
+        </button>
+      </div>
+    </section>
+
+    <!-- Recent Reports -->
+    <section class="space-y-8">
+      <h2 class="text-2xl sm:text-3xl font-bold text-blue-900 border-b-4 border-sea-blue-700 inline-block pb-2">
+        Recent Reports
+      </h2>
+      <div class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+        <table class="min-w-full divide-y divide-blue-200 text-left">
+          <thead class="bg-blue-400 text-blue-900 font-semibold">
+            <tr>
+              <th class="px-6 py-3" scope="col">Report Title</th>
+              <th class="px-6 py-3" scope="col">Type</th>
+              <th class="px-6 py-3" scope="col">Date Generated</th>
+              <th class="px-6 py-3" scope="col">Format</th>
+              <th class="px-6 py-3" scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-blue-200">
+            <tr class="hover:bg-blue-50 transition">
+              <td class="px-6 py-4 font-semibold text-blue-900">Monthly Crime Statistics - May 2024</td>
+              <td class="px-6 py-4">Crime Statistics</td>
+              <td class="px-6 py-4">2024-06-05</td>
+              <td class="px-6 py-4">PDF, Excel</td>
+              <td class="px-6 py-4">
+                <div class="flex space-x-2">
+                  <button class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-download"></i>
+                  </button>
+                  <button class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr class="hover:bg-blue-50 transition">
+              <td class="px-6 py-4 font-semibold text-blue-900">Q1 2024 Performance Review</td>
+              <td class="px-6 py-4">Performance</td>
+              <td class="px-6 py-4">2024-04-15</td>
+              <td class="px-6 py-4">PDF</td>
+              <td class="px-6 py-4">
+                <div class="flex space-x-2">
+                  <button class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-download"></i>
+                  </button>
+                  <button class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr class="hover:bg-blue-50 transition">
+              <td class="px-6 py-4 font-semibold text-blue-900">Fleet Utilization Analysis</td>
+              <td class="px-6 py-4">Fleet</td>
+              <td class="px-6 py-4">2024-04-01</td>
+              <td class="px-6 py-4">PDF, Excel</td>
+              <td class="px-6 py-4">
+                <div class="flex space-x-2">
+                  <button class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-download"></i>
+                  </button>
+                  <button class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+            <tr class="hover:bg-blue-50 transition">
+              <td class="px-6 py-4 font-semibold text-blue-900">Public Satisfaction Survey Results</td>
+              <td class="px-6 py-4">Survey</td>
+              <td class="px-6 py-4">2024-03-20</td>
+              <td class="px-6 py-4">PDF</td>
+              <td class="px-6 py-4">
+                <div class="flex space-x-2">
+                  <button class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-download"></i>
+                  </button>
+                  <button class="text-blue-600 hover:text-blue-800">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Component (same as index.html) -->
+  <footer class="bg-blue-900 text-blue-200 py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Ghana Police Management System</h4>
+          <p class="text-sm">Empowering Ghana's Police Force with Next-Gen Management</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-sm hover:text-yellow-300 transition">Home</a></li>
+            <li><a href="officers.html" class="text-sm hover:text-yellow-300 transition">Officers</a></li>
+            <li><a href="cases.html" class="text-sm hover:text-yellow-300 transition">Cases</a></li>
+            <li><a href="fleet.html" class="text-sm hover:text-yellow-300 transition">Fleet</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="about.html" class="text-sm hover:text-yellow-300 transition">About Us</a></li>
+            <li><a href="blog.html" class="text-sm hover:text-yellow-300 transition">Blog</a></li>
+            <li><a href="reports.html" class="text-sm hover:text-yellow-300 transition">Reports</a></li>
+            <li><a href="contact.html" class="text-sm hover:text-yellow-300 transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Connect With Us</h4>
+          <div class="flex space-x-4 text-yellow-400">
+            <a aria-label="Facebook" class="hover:text-yellow-300 transition" href="https://www.facebook.com/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a aria-label="Twitter" class="hover:text-yellow-300 transition" href="https://twitter.com/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a aria-label="LinkedIn" class="hover:text-yellow-300 transition" href="https://www.linkedin.com/company/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+            <a aria-label="Instagram" class="hover:text-yellow-300 transition" href="https://www.instagram.com/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-blue-800 mt-8 pt-6 text-center">
+        <p class="text-sm">© 2024 Ghana Police Management System. All rights reserved.</p>
+        <p class="text-xs mt-2 text-blue-400">Designed and developed for the Ghana Police Service</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>

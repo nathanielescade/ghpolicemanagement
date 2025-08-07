@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ghana Police Management System | Modern Police Operations Platform</title>
+  <meta name="description" content="Comprehensive police management system for Ghana Police Service. Streamline operations, manage officers, track cases, and improve public safety.">
+  <meta name="keywords" content="Ghana Police, Police Management System, Law Enforcement, Public Safety, Crime Prevention, Police Operations">
+  <meta name="author" content="Ghana Police Service">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ghanapolice.gov.gh/">
+  <meta property="og:title" content="Ghana Police Management System">
+  <meta property="og:description" content="Comprehensive police management system for Ghana Police Service. Streamline operations, manage officers, track cases, and improve public safety.">
+  <meta property="og:image" content="https://storage.googleapis.com/a1aa/image/dbfe0756-4da8-441d-4360-65dca78b4182.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ghanapolice.gov.gh/">
+  <meta property="twitter:title" content="Ghana Police Management System">
+  <meta property="twitter:description" content="Comprehensive police management system for Ghana Police Service. Streamline operations, manage officers, track cases, and improve public safety.">
+  <meta property="twitter:image" content="https://storage.googleapis.com/a1aa/image/dbfe0756-4da8-441d-4360-65dca78b4182.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://storage.googleapis.com/a1aa/image/dbfe0756-4da8-441d-4360-65dca78b4182.jpg" type="image/x-icon">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200 text-blue-900 min-h-screen flex flex-col">
+  <!-- Header Component -->
+  <header id="header" class="bg-gradient-to-r from-sea-blue-700 via-blue-600 to-sea-blue-800 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img alt="Logo of Ghana Police Service" class="w-12 h-12 rounded-full border-2 border-white" height="48" src="https://storage.googleapis.com/a1aa/image/dbfe0756-4da8-441d-4360-65dca78b4182.jpg" width="48">
+        <h1 class="text-white font-extrabold text-xl sm:text-2xl tracking-wide select-none">
+          Ghana Police Management System
+        </h1>
+      </div>
+      <nav class="hidden md:flex space-x-6 lg:space-x-8 text-white font-semibold">
+        <a class="hover:underline hover:text-yellow-300 transition" href="index.html">Home</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="officers.html">Officers</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="cases.html">Cases</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="fleet.html">Fleet</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="reports.html">Reports</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="about.html">About</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="blog.html">Blog</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="contact.html">Contact</a>
+      </nav>
+      <button aria-label="Toggle menu" class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-yellow-300" id="mobile-menu-button">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+    </div>
+    <nav class="md:hidden bg-gradient-to-r from-sea-blue-700 via-blue-600 to-sea-blue-800 px-6 py-4 space-y-3 hidden" id="mobile-menu">
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="index.html">Home</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="officers.html">Officers</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="cases.html">Cases</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="fleet.html">Fleet</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="reports.html">Reports</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="about.html">About</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="blog.html">Blog</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 space-y-12 sm:space-y-16">
+    <!-- Hero Section Component -->
+    <section class="relative bg-white rounded-3xl shadow-2xl overflow-hidden flex flex-col md:flex-row items-center md:items-stretch">
+      <div class="md:w-1/2 p-6 sm:p-10 flex flex-col justify-center space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-blue-900 leading-tight">
+          Empowering Ghana's Police Force with Next-Gen Management
+        </h2>
+        <p class="text-blue-800 text-base sm:text-lg leading-relaxed">
+          A comprehensive, secure, and intelligent system designed to streamline
+          police operations, enhance transparency, and improve public safety
+          across Ghana's police stations.
+        </p>
+        <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+          <a class="inline-block bg-sea-blue-700 hover:bg-sea-blue-800 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition text-center" href="officers.html">
+            Explore Officers
+          </a>
+          <a class="inline-block bg-blue-400 hover:bg-blue-500 text-blue-900 font-semibold px-6 py-3 rounded-lg shadow-lg transition text-center" href="cases.html">
+            View Cases
+          </a>
+        </div>
+      </div>
+      <div class="md:w-1/2 relative">
+        <img alt="Ghana Police officers collaborating" class="w-full h-64 md:h-full object-cover rounded-r-3xl hero-image" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c79cfab4-bb8c-4374-1022-b81273beb7ff.jpg" width="600">
+        <div class="absolute top-6 left-6 bg-sea-blue-700 bg-opacity-80 text-white px-4 py-2 rounded-lg font-semibold shadow-lg flex items-center space-x-2">
+          <i class="fas fa-shield-alt fa-lg"></i>
+          <span>Trusted & Secure</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Features Section -->
+    <section class="space-y-8">
+      <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 border-b-4 border-sea-blue-700 inline-block pb-2">
+        Key Features of Our System
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+          <div class="text-sea-blue-700 text-4xl mb-4">
+            <i class="fas fa-users"></i>
+          </div>
+          <h4 class="text-xl font-semibold text-blue-900 mb-2">Officer Management</h4>
+          <p class="text-blue-700">Comprehensive directory of all police officers with contact information and assignments.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+          <div class="text-sea-blue-700 text-4xl mb-4">
+            <i class="fas fa-clipboard-list"></i>
+          </div>
+          <h4 class="text-xl font-semibold text-blue-900 mb-2">Case Tracking</h4>
+          <p class="text-blue-700">Real-time case management with status updates and assignment tracking.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+          <div class="text-sea-blue-700 text-4xl mb-4">
+            <i class="fas fa-car"></i>
+          </div>
+          <h4 class="text-xl font-semibold text-blue-900 mb-2">Fleet Management</h4>
+          <p class="text-blue-700">Complete vehicle tracking system with maintenance schedules and location monitoring.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+          <div class="text-sea-blue-700 text-4xl mb-4">
+            <i class="fas fa-chart-line"></i>
+          </div>
+          <h4 class="text-xl font-semibold text-blue-900 mb-2">Analytics & Reports</h4>
+          <p class="text-blue-700">Detailed analytics and reporting tools for data-driven decision making.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+          <div class="text-sea-blue-700 text-4xl mb-4">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h4 class="text-xl font-semibold text-blue-900 mb-2">Security & Compliance</h4>
+          <p class="text-blue-700">Enterprise-grade security with role-based access control and audit trails.</p>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+          <div class="text-sea-blue-700 text-4xl mb-4">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h4 class="text-xl font-semibold text-blue-900 mb-2">Mobile Access</h4>
+          <p class="text-blue-700">Full functionality on mobile devices for officers in the field.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Officers Preview Section -->
+    <section class="space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+        <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 border-b-4 border-sea-blue-700 inline-block pb-2">
+          Featured Officers
+        </h3>
+        <a class="inline-flex items-center text-sea-blue-700 font-semibold hover:text-sea-blue-800 transition" href="officers.html">
+          View All Officers <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <article class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition">
+          <img alt="Portrait of Officer Kwame Mensah" class="w-32 h-32 rounded-full object-cover border-4 border-sea-blue-700 mb-4" height="150" loading="lazy" src="https://storage.googleapis.com/a1aa/image/84c5b122-b581-4a85-3cd5-ad72b1becd62.jpg" width="150">
+          <h4 class="text-xl font-semibold text-blue-900">Kwame Mensah</h4>
+          <p class="text-sea-blue-700 font-semibold">Chief Inspector</p>
+          <p class="text-blue-700 mt-2 text-sm">Accra Regional Command</p>
+          <div class="mt-4 flex space-x-4 text-yellow-600">
+            <a aria-label="Call Officer Kwame Mensah" class="hover:text-yellow-800 transition" href="tel:+233201234567">
+              <i class="fas fa-phone-alt"></i>
+            </a>
+            <a aria-label="Email Officer Kwame Mensah" class="hover:text-yellow-800 transition" href="mailto:kwame.mensah@ghanapolice.gov.gh">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition">
+          <img alt="Portrait of Officer Abena Owusu" class="w-32 h-32 rounded-full object-cover border-4 border-sea-blue-700 mb-4" height="150" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c739d7d7-dc0f-4385-5e80-c5e4f04199b4.jpg" width="150">
+          <h4 class="text-xl font-semibold text-blue-900">Abena Owusu</h4>
+          <p class="text-sea-blue-700 font-semibold">Sergeant</p>
+          <p class="text-blue-700 mt-2 text-sm">Kumasi Central Police Station</p>
+          <div class="mt-4 flex space-x-4 text-yellow-600">
+            <a aria-label="Call Officer Abena Owusu" class="hover:text-yellow-800 transition" href="tel:+233241234567">
+              <i class="fas fa-phone-alt"></i>
+            </a>
+            <a aria-label="Email Officer Abena Owusu" class="hover:text-yellow-800 transition" href="mailto:abena.owusu@ghanapolice.gov.gh">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition">
+          <img alt="Portrait of Officer Yaw Boateng" class="w-32 h-32 rounded-full object-cover border-4 border-sea-blue-700 mb-4" height="150" loading="lazy" src="https://storage.googleapis.com/a1aa/image/8e905564-9ea9-4546-4e9b-d8bea913d29b.jpg" width="150">
+          <h4 class="text-xl font-semibold text-blue-900">Yaw Boateng</h4>
+          <p class="text-sea-blue-700 font-semibold">Lieutenant</p>
+          <p class="text-blue-700 mt-2 text-sm">Takoradi Police Headquarters</p>
+          <div class="mt-4 flex space-x-4 text-yellow-600">
+            <a aria-label="Call Officer Yaw Boateng" class="hover:text-yellow-800 transition" href="tel:+233261234567">
+              <i class="fas fa-phone-alt"></i>
+            </a>
+            <a aria-label="Email Officer Yaw Boateng" class="hover:text-yellow-800 transition" href="mailto:yaw.boateng@ghanapolice.gov.gh">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-lg p-6 flex flex-col items-center text-center hover:shadow-2xl transition">
+          <img alt="Portrait of Officer Esi Adjei" class="w-32 h-32 rounded-full object-cover border-4 border-sea-blue-700 mb-4" height="150" loading="lazy" src="https://storage.googleapis.com/a1aa/image/13f1dbf0-6610-4eb2-9e19-ddcfa71d2ee8.jpg" width="150">
+          <h4 class="text-xl font-semibold text-blue-900">Esi Adjei</h4>
+          <p class="text-sea-blue-700 font-semibold">Detective</p>
+          <p class="text-blue-700 mt-2 text-sm">Cape Coast Police Division</p>
+          <div class="mt-4 flex space-x-4 text-yellow-600">
+            <a aria-label="Call Officer Esi Adjei" class="hover:text-yellow-800 transition" href="tel:+233271234567">
+              <i class="fas fa-phone-alt"></i>
+            </a>
+            <a aria-label="Email Officer Esi Adjei" class="hover:text-yellow-800 transition" href="mailto:esi.adjei@ghanapolice.gov.gh">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Cases Preview Section -->
+    <section class="space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+        <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 border-b-4 border-blue-600 inline-block pb-2">
+          Recent Cases
+        </h3>
+        <a class="inline-flex items-center text-sea-blue-700 font-semibold hover:text-sea-blue-800 transition" href="cases.html">
+          View All Cases <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+      <div class="overflow-x-auto rounded-lg shadow-lg bg-white">
+        <table class="min-w-full divide-y divide-blue-200 text-left">
+          <thead class="bg-blue-400 text-blue-900 font-semibold">
+            <tr>
+              <th class="px-6 py-3" scope="col">Case ID</th>
+              <th class="px-6 py-3" scope="col">Title</th>
+              <th class="px-6 py-3" scope="col">Status</th>
+              <th class="px-6 py-3" scope="col">Priority</th>
+              <th class="px-6 py-3" scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-blue-200">
+            <tr class="hover:bg-blue-50 transition">
+              <td class="px-6 py-4 font-mono text-sm text-blue-700">C-20240601-001</td>
+              <td class="px-6 py-4 font-semibold text-blue-900">Robbery at Accra Mall</td>
+              <td class="px-6 py-4">
+                <span class="status-badge status-open">Open</span>
+              </td>
+              <td class="px-6 py-4">
+                <span class="status-badge priority-high">High</span>
+              </td>
+              <td class="px-6 py-4">
+                <a href="case-detail.html?id=C-20240601-001" class="text-blue-600 hover:text-blue-800">
+                  <i class="fas fa-eye"></i> View
+                </a>
+              </td>
+            </tr>
+            <tr class="hover:bg-blue-50 transition">
+              <td class="px-6 py-4 font-mono text-sm text-blue-700">C-20240602-002</td>
+              <td class="px-6 py-4 font-semibold text-blue-900">Traffic Accident on Tema Highway</td>
+              <td class="px-6 py-4">
+                <span class="status-badge status-progress">In Progress</span>
+              </td>
+              <td class="px-6 py-4">
+                <span class="status-badge priority-medium">Medium</span>
+              </td>
+              <td class="px-6 py-4">
+                <a href="case-detail.html?id=C-20240602-002" class="text-blue-600 hover:text-blue-800">
+                  <i class="fas fa-eye"></i> View
+                </a>
+              </td>
+            </tr>
+            <tr class="hover:bg-blue-50 transition">
+              <td class="px-6 py-4 font-mono text-sm text-blue-700">C-20240603-003</td>
+              <td class="px-6 py-4 font-semibold text-blue-900">Burglary in Kumasi Suburb</td>
+              <td class="px-6 py-4">
+                <span class="status-badge status-closed">Closed</span>
+              </td>
+              <td class="px-6 py-4">
+                <span class="status-badge priority-low">Low</span>
+              </td>
+              <td class="px-6 py-4">
+                <a href="case-detail.html?id=C-20240603-003" class="text-blue-600 hover:text-blue-800">
+                  <i class="fas fa-eye"></i> View
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Fleet Preview Section -->
+    <section class="space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+        <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 border-b-4 border-sea-blue-800 inline-block pb-2">
+          Fleet Overview
+        </h3>
+        <a class="inline-flex items-center text-sea-blue-700 font-semibold hover:text-sea-blue-800 transition" href="fleet.html">
+          View All Vehicles <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition flex flex-col">
+          <img alt="Patrol car Toyota Hilux" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/9e2f3485-8e90-4469-0497-086b84cdfc4e.jpg" width="400">
+          <div class="p-6 flex flex-col flex-grow">
+            <h4 class="text-xl font-semibold text-blue-900 mb-1">Toyota Hilux</h4>
+            <p class="text-blue-700 mb-2">License Plate: GH-1234-01</p>
+            <p class="text-sea-blue-700 font-semibold mb-4">Status: Active</p>
+            <a href="vehicle-detail.html?id=GH-1234-01" class="mt-auto bg-sea-blue-800 hover:bg-sea-blue-900 text-white font-semibold py-2 rounded-lg shadow-md transition text-center">
+              View Details
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition flex flex-col">
+          <img alt="Motorcycle Honda CBR" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/a0569129-75b9-4db6-e462-e543a2955ef7.jpg" width="400">
+          <div class="p-6 flex flex-col flex-grow">
+            <h4 class="text-xl font-semibold text-blue-900 mb-1">Honda CBR</h4>
+            <p class="text-blue-700 mb-2">License Plate: GH-5678-02</p>
+            <p class="text-sea-blue-700 font-semibold mb-4">Status: Active</p>
+            <a href="vehicle-detail.html?id=GH-5678-02" class="mt-auto bg-sea-blue-800 hover:bg-sea-blue-900 text-white font-semibold py-2 rounded-lg shadow-md transition text-center">
+              View Details
+            </a>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition flex flex-col">
+          <img alt="Armored vehicle" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c12b0ef1-de59-4ba0-95d3-671bcb5e366c.jpg" width="400">
+          <div class="p-6 flex flex-col flex-grow">
+            <h4 class="text-xl font-semibold text-blue-900 mb-1">Armored Vehicle</h4>
+            <p class="text-blue-700 mb-2">License Plate: GH-9012-03</p>
+            <p class="text-sea-blue-700 font-semibold mb-4">Status: Maintenance</p>
+            <a href="vehicle-detail.html?id=GH-9012-03" class="mt-auto bg-sea-blue-800 hover:bg-sea-blue-900 text-white font-semibold py-2 rounded-lg shadow-md transition text-center">
+              View Details
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reports Preview Section -->
+    <section class="space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+        <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 border-b-4 border-sea-blue-700 inline-block pb-2">
+          Reports & Analytics
+        </h3>
+        <a class="inline-flex items-center text-sea-blue-700 font-semibold hover:text-sea-blue-800 transition" href="reports.html">
+          View All Reports <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="bg-white rounded-3xl shadow-2xl p-8 flex flex-col">
+          <h4 class="text-2xl font-semibold text-blue-900 mb-6">Crime Rate Trends (Last 6 Months)</h4>
+          <img alt="Line chart showing crime rate trends" class="rounded-xl shadow-lg" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3ba9c836-bb5d-4da6-d8ad-bb06a5b7e9a7.jpg" width="600">
+          <div class="mt-4 text-center">
+            <a href="report-detail.html?id=crime-trends" class="text-blue-600 hover:text-blue-800 font-medium">View Full Report</a>
+          </div>
+        </div>
+        <div class="bg-white rounded-3xl shadow-2xl p-8 flex flex-col">
+          <h4 class="text-2xl font-semibold text-blue-900 mb-6">Case Resolution Rates by Region</h4>
+          <img alt="Bar chart showing case resolution rates" class="rounded-xl shadow-lg" height="350" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5e009176-94ad-4d2f-7d68-d4deea0b9bde.jpg" width="600">
+          <div class="mt-4 text-center">
+            <a href="report-detail.html?id=resolution-rates" class="text-blue-600 hover:text-blue-800 font-medium">View Full Report</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Preview Section -->
+    <section class="space-y-8">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+        <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 border-b-4 border-sea-blue-700 inline-block pb-2">
+          Latest News & Updates
+        </h3>
+        <a class="inline-flex items-center text-sea-blue-700 font-semibold hover:text-sea-blue-800 transition" href="blog.html">
+          View All Posts <i class="fas fa-arrow-right ml-2"></i>
+        </a>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+          <img alt="New system features" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3ba9c836-bb5d-4da6-d8ad-bb06a5b7e9a7.jpg" width="400">
+          <div class="p-6">
+            <div class="text-sm text-blue-600 mb-2">
+              <span>June 10, 2024</span>
+              <span class="mx-2">•</span>
+              <span>Technology</span>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-900 mb-3">New Mobile App Features for Field Officers</h3>
+            <p class="text-blue-800 mb-4">Discover the latest enhancements to our mobile application designed to support officers in the field with real-time data access.</p>
+            <a href="blog-detail.html?id=new-mobile-features" class="text-sea-blue-700 font-semibold hover:text-sea-blue-800 transition">Read More →</a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+          <img alt="Community policing event" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5e009176-94ad-4d2f-7d68-d4deea0b9bde.jpg" width="400">
+          <div class="p-6">
+            <div class="text-sm text-blue-600 mb-2">
+              <span>June 5, 2024</span>
+              <span class="mx-2">•</span>
+              <span>Community</span>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-900 mb-3">Community Policing Initiative Launches in Kumasi</h3>
+            <p class="text-blue-800 mb-4">Learn about our new community engagement program aimed at building stronger relationships between police and local communities.</p>
+            <a href="blog-detail.html?id=community-policing" class="text-sea-blue-700 font-semibold hover:text-sea-blue-800 transition">Read More →</a>
+          </div>
+        </article>
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+          <img alt="Cybercrime prevention" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c12b0ef1-de59-4ba0-95d3-671bcb5e366c.jpg" width="400">
+          <div class="p-6">
+            <div class="text-sm text-blue-600 mb-2">
+              <span>May 28, 2024</span>
+              <span class="mx-2">•</span>
+              <span>Safety Tips</span>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-900 mb-3">Protecting Yourself from Online Scams</h3>
+            <p class="text-blue-800 mb-4">Essential tips and strategies to help citizens protect themselves from increasingly sophisticated online fraud and scams.</p>
+            <a href="blog-detail.html?id=online-scams" class="text-sea-blue-700 font-semibold hover:text-sea-blue-800 transition">Read More →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="bg-white rounded-3xl shadow-2xl p-6 sm:p-10">
+      <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 mb-8 text-center">System Impact</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="text-center">
+          <p class="text-4xl font-bold text-sea-blue-700">4</p>
+          <p class="text-blue-700 mt-2">Police Stations</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-bold text-sea-blue-700">500+</p>
+          <p class="text-blue-700 mt-2">Officers Managed</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-bold text-sea-blue-700">1200+</p>
+          <p class="text-blue-700 mt-2">Cases Tracked</p>
+        </div>
+        <div class="text-center">
+          <p class="text-4xl font-bold text-sea-blue-700">85%</p>
+          <p class="text-blue-700 mt-2">Efficiency Increase</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="space-y-8">
+      <h3 class="text-2xl sm:text-3xl font-bold text-blue-900 border-b-4 border-sea-blue-700 inline-block pb-2">
+        What Our Officers Say
+      </h3>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <div class="flex items-center mb-4">
+            <img alt="Testimonial from Chief Inspector" class="w-16 h-16 rounded-full object-cover border-2 border-sea-blue-700" height="64" src="https://storage.googleapis.com/a1aa/image/84c5b122-b581-4a85-3cd5-ad72b1becd62.jpg" width="64">
+            <div class="ml-4">
+              <h4 class="font-semibold text-blue-900">Kwame Mensah</h4>
+              <p class="text-sm text-blue-700">Chief Inspector, Accra</p>
+            </div>
+          </div>
+          <p class="text-blue-800 italic">"This system has revolutionized how we manage cases and assign officers. Response times have improved dramatically."</p>
+          <div class="mt-4 text-yellow-500">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+        <div class="bg-white rounded-xl shadow-lg p-6">
+          <div class="flex items-center mb-4">
+            <img alt="Testimonial from Sergeant" class="w-16 h-16 rounded-full object-cover border-2 border-sea-blue-700" height="64" src="https://storage.googleapis.com/a1aa/image/c739d7d7-dc0f-4385-5e80-c5e4f04199b4.jpg" width="64">
+            <div class="ml-4">
+              <h4 class="font-semibold text-blue-900">Abena Owusu</h4>
+              <p class="text-sm text-blue-700">Sergeant, Kumasi</p>
+            </div>
+          </div>
+          <p class="text-blue-800 italic">"The mobile access feature allows me to update case information directly from the field, saving valuable time."</p>
+          <div class="mt-4 text-yellow-500">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Component -->
+  <footer class="bg-blue-900 text-blue-200 py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Ghana Police Management System</h4>
+          <p class="text-sm">Empowering Ghana's Police Force with Next-Gen Management</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-sm hover:text-yellow-300 transition">Home</a></li>
+            <li><a href="officers.html" class="text-sm hover:text-yellow-300 transition">Officers</a></li>
+            <li><a href="cases.html" class="text-sm hover:text-yellow-300 transition">Cases</a></li>
+            <li><a href="fleet.html" class="text-sm hover:text-yellow-300 transition">Fleet</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="about.html" class="text-sm hover:text-yellow-300 transition">About Us</a></li>
+            <li><a href="blog.html" class="text-sm hover:text-yellow-300 transition">Blog</a></li>
+            <li><a href="reports.html" class="text-sm hover:text-yellow-300 transition">Reports</a></li>
+            <li><a href="contact.html" class="text-sm hover:text-yellow-300 transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Connect With Us</h4>
+          <div class="flex space-x-4 text-yellow-400">
+            <a aria-label="Facebook" class="hover:text-yellow-300 transition" href="https://www.facebook.com/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a aria-label="Twitter" class="hover:text-yellow-300 transition" href="https://twitter.com/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a aria-label="LinkedIn" class="hover:text-yellow-300 transition" href="https://www.linkedin.com/company/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+            <a aria-label="Instagram" class="hover:text-yellow-300 transition" href="https://www.instagram.com/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-blue-800 mt-8 pt-6 text-center">
+        <p class="text-sm">© 2024 Ghana Police Management System. All rights reserved.</p>
+        <p class="text-xs mt-2 text-blue-400">Designed and developed for the Ghana Police Service</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>

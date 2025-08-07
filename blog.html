@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Ghana Police Management System</title>
+  <meta name="description" content="Read the latest news and updates from the Ghana Police Management System. Stay informed about police operations, community initiatives, and technological advancements.">
+  <meta name="keywords" content="Ghana Police Blog, Police News, Law Enforcement Updates, Community Safety, Police Technology">
+  <meta name="author" content="Ghana Police Service">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ghanapolice.gov.gh/blog.html">
+  <meta property="og:title" content="Blog | Ghana Police Management System">
+  <meta property="og:description" content="Read the latest news and updates from the Ghana Police Management System. Stay informed about police operations, community initiatives, and technological advancements.">
+  <meta property="og:image" content="https://storage.googleapis.com/a1aa/image/dbfe0756-4da8-441d-4360-65dca78b4182.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ghanapolice.gov.gh/blog.html">
+  <meta property="twitter:title" content="Blog | Ghana Police Management System">
+  <meta property="twitter:description" content="Read the latest news and updates from the Ghana Police Management System. Stay informed about police operations, community initiatives, and technological advancements.">
+  <meta property="twitter:image" content="https://storage.googleapis.com/a1aa/image/dbfe0756-4da8-441d-4360-65dca78b4182.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://storage.googleapis.com/a1aa/image/dbfe0756-4da8-441d-4360-65dca78b4182.jpg" type="image/x-icon">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200 text-blue-900 min-h-screen flex flex-col">
+  <!-- Header Component (same as index.html) -->
+  <header id="header" class="bg-gradient-to-r from-sea-blue-700 via-blue-600 to-sea-blue-800 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img alt="Logo of Ghana Police Service" class="w-12 h-12 rounded-full border-2 border-white" height="48" src="https://storage.googleapis.com/a1aa/image/dbfe0756-4da8-441d-4360-65dca78b4182.jpg" width="48">
+        <h1 class="text-white font-extrabold text-xl sm:text-2xl tracking-wide select-none">
+          Ghana Police Management System
+        </h1>
+      </div>
+      <nav class="hidden md:flex space-x-6 lg:space-x-8 text-white font-semibold">
+        <a class="hover:underline hover:text-yellow-300 transition" href="index.html">Home</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="officers.html">Officers</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="cases.html">Cases</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="fleet.html">Fleet</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="reports.html">Reports</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="about.html">About</a>
+        <a class="hover:underline hover:text-yellow-300 transition font-bold border-b-2 border-yellow-300" href="blog.html">Blog</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="contact.html">Contact</a>
+      </nav>
+      <button aria-label="Toggle menu" class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-yellow-300" id="mobile-menu-button">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+    </div>
+    <nav class="md:hidden bg-gradient-to-r from-sea-blue-700 via-blue-600 to-sea-blue-800 px-6 py-4 space-y-3 hidden" id="mobile-menu">
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="index.html">Home</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="officers.html">Officers</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="cases.html">Cases</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="fleet.html">Fleet</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="reports.html">Reports</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="about.html">About</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition font-bold border-b-2 border-yellow-300" href="blog.html">Blog</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 space-y-12 sm:space-y-16">
+    <!-- Page Header -->
+    <section class="text-center">
+      <h1 class="text-3xl sm:text-4xl font-extrabold text-blue-900 mb-4">Police News & Updates</h1>
+      <p class="text-lg text-blue-800 max-w-3xl mx-auto">Stay informed with the latest news, updates, and announcements from the Ghana Police Service and our management system.</p>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+      <div class="md:flex">
+        <div class="md:w-1/2">
+          <img alt="Featured blog post image" class="w-full h-64 md:h-full object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c79cfab4-bb8c-4374-1022-b81273beb7ff.jpg" width="600">
+        </div>
+        <div class="md:w-1/2 p-6 sm:p-8 flex flex-col justify-center">
+          <div class="text-sm text-blue-600 mb-2">
+            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full font-semibold">Featured</span>
+            <span class="mx-2">•</span>
+            <span>June 15, 2024</span>
+          </div>
+          <h2 class="text-2xl sm:text-3xl font-bold text-blue-900 mb-4">Ghana Police Management System Wins National Digital Innovation Award</h2>
+          <p class="text-blue-800 mb-6">Our comprehensive police management system has been recognized for its innovative approach to modernizing law enforcement operations in Ghana.</p>
+          <a href="#" class="inline-block bg-sea-blue-700 hover:bg-sea-blue-800 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition">
+            Read More
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="flex flex-wrap gap-3 justify-center">
+      <button class="bg-white text-blue-900 font-semibold px-4 py-2 rounded-lg shadow hover:bg-blue-50 transition">All Posts</button>
+      <button class="bg-white text-blue-900 font-semibold px-4 py-2 rounded-lg shadow hover:bg-blue-50 transition">Announcements</button>
+      <button class="bg-white text-blue-900 font-semibold px-4 py-2 rounded-lg shadow hover:bg-blue-50 transition">Technology</button>
+      <button class="bg-white text-blue-900 font-semibold px-4 py-2 rounded-lg shadow hover:bg-blue-50 transition">Community</button>
+      <button class="bg-white text-blue-900 font-semibold px-4 py-2 rounded-lg shadow hover:bg-blue-50 transition">Safety Tips</button>
+      <button class="bg-white text-blue-900 font-semibold px-4 py-2 rounded-lg shadow hover:bg-blue-50 transition">Events</button>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="space-y-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Blog Post 1 -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+          <img alt="New system features" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3ba9c836-bb5d-4da6-d8ad-bb06a5b7e9a7.jpg" width="400">
+          <div class="p-6">
+            <div class="text-sm text-blue-600 mb-2">
+              <span>June 10, 2024</span>
+              <span class="mx-2">•</span>
+              <span>Technology</span>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-900 mb-3">New Mobile App Features for Field Officers</h3>
+            <p class="text-blue-800 mb-4">Discover the latest enhancements to our mobile application designed to support officers in the field with real-time data access.</p>
+            <a href="#" class="text-sea-blue-700 font-semibold hover:text-sea-blue-800 transition">Read More →</a>
+          </div>
+        </article>
+        
+        <!-- Blog Post 2 -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+          <img alt="Community policing event" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5e009176-94ad-4d2f-7d68-d4deea0b9bde.jpg" width="400">
+          <div class="p-6">
+            <div class="text-sm text-blue-600 mb-2">
+              <span>June 5, 2024</span>
+              <span class="mx-2">•</span>
+              <span>Community</span>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-900 mb-3">Community Policing Initiative Launches in Kumasi</h3>
+            <p class="text-blue-800 mb-4">Learn about our new community engagement program aimed at building stronger relationships between police and local communities.</p>
+            <a href="#" class="text-sea-blue-700 font-semibold hover:text-sea-blue-800 transition">Read More →</a>
+          </div>
+        </article>
+        
+        <!-- Blog Post 3 -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+          <img alt="Cybercrime prevention" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c12b0ef1-de59-4ba0-95d3-671bcb5e366c.jpg" width="400">
+          <div class="p-6">
+            <div class="text-sm text-blue-600 mb-2">
+              <span>May 28, 2024</span>
+              <span class="mx-2">•</span>
+              <span>Safety Tips</span>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-900 mb-3">Protecting Yourself from Online Scams</h3>
+            <p class="text-blue-800 mb-4">Essential tips and strategies to help citizens protect themselves from increasingly sophisticated online fraud and scams.</p>
+            <a href="#" class="text-sea-blue-700 font-semibold hover:text-sea-blue-800 transition">Read More →</a>
+          </div>
+        </article>
+        
+        <!-- Blog Post 4 -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+          <img alt="Police training" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/1664bb51-d6d9-4e51-ebee-4b2b294f3609.jpg" width="400">
+          <div class="p-6">
+            <div class="text-sm text-blue-600 mb-2">
+              <span>May 20, 2024</span>
+              <span class="mx-2">•</span>
+              <span>Announcements</span>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-900 mb-3">New Training Program for Digital Forensics</h3>
+            <p class="text-blue-800 mb-4">Announcing a comprehensive training program to equip officers with advanced digital investigation skills.</p>
+            <a href="#" class="text-sea-blue-700 font-semibold hover:text-sea-blue-800 transition">Read More →</a>
+          </div>
+        </article>
+        
+        <!-- Blog Post 5 -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+          <img alt="Traffic safety campaign" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/07c7be15-7bd1-44bc-64ce-c0883e6666e3.jpg" width="400">
+          <div class="p-6">
+            <div class="text-sm text-blue-600 mb-2">
+              <span>May 15, 2024</span>
+              <span class="mx-2">•</span>
+              <span>Events</span>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-900 mb-3">National Road Safety Campaign Launch</h3>
+            <p class="text-blue-800 mb-4">Join us as we launch a nationwide campaign to reduce traffic accidents and improve road safety across Ghana.</p>
+            <a href="#" class="text-sea-blue-700 font-semibold hover:text-sea-blue-800 transition">Read More →</a>
+          </div>
+        </article>
+        
+        <!-- Blog Post 6 -->
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+          <img alt="Police recruitment" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/9e2f3485-8e90-4469-0497-086b84cdfc4e.jpg" width="400">
+          <div class="p-6">
+            <div class="text-sm text-blue-600 mb-2">
+              <span>May 10, 2024</span>
+              <span class="mx-2">•</span>
+              <span>Announcements</span>
+            </div>
+            <h3 class="text-xl font-semibold text-blue-900 mb-3">Recruitment Drive for Technology Specialists</h3>
+            <p class="text-blue-800 mb-4">The Ghana Police Service is seeking qualified technology professionals to join our digital transformation team.</p>
+            <a href="#" class="text-sea-blue-700 font-semibold hover:text-sea-blue-800 transition">Read More →</a>
+          </div>
+        </article>
+      </div>
+      
+      <!-- Pagination -->
+      <div class="flex justify-center items-center space-x-2">
+        <button class="px-4 py-2 rounded-lg bg-white text-blue-900 font-medium shadow hover:bg-blue-50 transition disabled:opacity-50" disabled>
+          <i class="fas fa-chevron-left mr-2"></i> Previous
+        </button>
+        <button class="px-4 py-2 rounded-lg bg-sea-blue-700 text-white font-medium shadow">1</button>
+        <button class="px-4 py-2 rounded-lg bg-white text-blue-900 font-medium shadow hover:bg-blue-50 transition">2</button>
+        <button class="px-4 py-2 rounded-lg bg-white text-blue-900 font-medium shadow hover:bg-blue-50 transition">3</button>
+        <span class="px-2">...</span>
+        <button class="px-4 py-2 rounded-lg bg-white text-blue-900 font-medium shadow hover:bg-blue-50 transition">8</button>
+        <button class="px-4 py-2 rounded-lg bg-white text-blue-900 font-medium shadow hover:bg-blue-50 transition">
+          Next <i class="fas fa-chevron-right ml-2"></i>
+        </button>
+      </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="bg-white rounded-3xl shadow-2xl p-6 sm:p-10 text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold text-blue-900 mb-4">Stay Updated</h2>
+      <p class="text-blue-800 max-w-2xl mx-auto mb-6">Subscribe to our newsletter to receive the latest news and updates from the Ghana Police Management System.</p>
+      <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-3">
+        <input type="email" placeholder="Your email address" class="flex-grow rounded-lg border border-blue-300 bg-white py-3 px-4 text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        <button type="submit" class="bg-sea-blue-700 hover:bg-sea-blue-800 text-white font-semibold px-6 py-3 rounded-lg shadow-lg transition">
+          Subscribe
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer Component (same as index.html) -->
+  <footer class="bg-blue-900 text-blue-200 py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Ghana Police Management System</h4>
+          <p class="text-sm">Empowering Ghana's Police Force with Next-Gen Management</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-sm hover:text-yellow-300 transition">Home</a></li>
+            <li><a href="officers.html" class="text-sm hover:text-yellow-300 transition">Officers</a></li>
+            <li><a href="cases.html" class="text-sm hover:text-yellow-300 transition">Cases</a></li>
+            <li><a href="fleet.html" class="text-sm hover:text-yellow-300 transition">Fleet</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="about.html" class="text-sm hover:text-yellow-300 transition">About Us</a></li>
+            <li><a href="blog.html" class="text-sm hover:text-yellow-300 transition">Blog</a></li>
+            <li><a href="reports.html" class="text-sm hover:text-yellow-300 transition">Reports</a></li>
+            <li><a href="contact.html" class="text-sm hover:text-yellow-300 transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Connect With Us</h4>
+          <div class="flex space-x-4 text-yellow-400">
+            <a aria-label="Facebook" class="hover:text-yellow-300 transition" href="https://www.facebook.com/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a aria-label="Twitter" class="hover:text-yellow-300 transition" href="https://twitter.com/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a aria-label="LinkedIn" class="hover:text-yellow-300 transition" href="https://www.linkedin.com/company/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+            <a aria-label="Instagram" class="hover:text-yellow-300 transition" href="https://www.instagram.com/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-blue-800 mt-8 pt-6 text-center">
+        <p class="text-sm">© 2024 Ghana Police Management System. All rights reserved.</p>
+        <p class="text-xs mt-2 text-blue-400">Designed and developed for the Ghana Police Service</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Mobile App Features for Field Officers | Ghana Police Management System</title>
+  <meta name="description" content="Discover the latest enhancements to our mobile application designed to support officers in the field with real-time data access.">
+  <meta name="keywords" content="Ghana Police Mobile App, Police Technology, Field Officers, Digital Policing, Mobile Application">
+  <meta name="author" content="Ghana Police Service">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ghanapolice.gov.gh/blog-detail.html?id=new-mobile-features">
+  <meta property="og:title" content="New Mobile App Features for Field Officers | Ghana Police Management System">
+  <meta property="og:description" content="Discover the latest enhancements to our mobile application designed to support officers in the field with real-time data access.">
+  <meta property="og:image" content="https://storage.googleapis.com/a1aa/image/3ba9c836-bb5d-4da6-d8ad-bb06a5b7e9a7.jpg">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://ghanapolice.gov.gh/blog-detail.html?id=new-mobile-features">
+  <meta property="twitter:title" content="New Mobile App Features for Field Officers | Ghana Police Management System">
+  <meta property="twitter:description" content="Discover the latest enhancements to our mobile application designed to support officers in the field with real-time data access.">
+  <meta property="twitter:image" content="https://storage.googleapis.com/a1aa/image/3ba9c836-bb5d-4da6-d8ad-bb06a5b7e9a7.jpg">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="https://storage.googleapis.com/a1aa/image/dbfe0756-4da8-441d-4360-65dca78b4182.jpg" type="image/x-icon">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-b from-blue-50 via-blue-100 to-blue-200 text-blue-900 min-h-screen flex flex-col">
+  <!-- Header Component -->
+  <header id="header" class="bg-gradient-to-r from-sea-blue-700 via-blue-600 to-sea-blue-800 shadow-lg sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <img alt="Logo of Ghana Police Service" class="w-12 h-12 rounded-full border-2 border-white" height="48" src="https://storage.googleapis.com/a1aa/image/dbfe0756-4da8-441d-4360-65dca78b4182.jpg" width="48">
+        <h1 class="text-white font-extrabold text-xl sm:text-2xl tracking-wide select-none">
+          Ghana Police Management System
+        </h1>
+      </div>
+      <nav class="hidden md:flex space-x-6 lg:space-x-8 text-white font-semibold">
+        <a class="hover:underline hover:text-yellow-300 transition" href="index.html">Home</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="officers.html">Officers</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="cases.html">Cases</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="fleet.html">Fleet</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="reports.html">Reports</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="about.html">About</a>
+        <a class="hover:underline hover:text-yellow-300 transition font-bold border-b-2 border-yellow-300" href="blog.html">Blog</a>
+        <a class="hover:underline hover:text-yellow-300 transition" href="contact.html">Contact</a>
+      </nav>
+      <button aria-label="Toggle menu" class="md:hidden text-white focus:outline-none focus:ring-2 focus:ring-yellow-300" id="mobile-menu-button">
+        <i class="fas fa-bars fa-lg"></i>
+      </button>
+    </div>
+    <nav class="md:hidden bg-gradient-to-r from-sea-blue-700 via-blue-600 to-sea-blue-800 px-6 py-4 space-y-3 hidden" id="mobile-menu">
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="index.html">Home</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="officers.html">Officers</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="cases.html">Cases</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="fleet.html">Fleet</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="reports.html">Reports</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="about.html">About</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition font-bold border-b-2 border-yellow-300" href="blog.html">Blog</a>
+      <a class="block text-white font-semibold hover:underline hover:text-yellow-300 transition" href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="flex-grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 space-y-12 sm:space-y-16">
+    <!-- Breadcrumb -->
+    <nav class="flex" aria-label="Breadcrumb">
+      <ol class="inline-flex items-center space-x-1 md:space-x-3">
+        <li class="inline-flex items-center">
+          <a href="index.html" class="text-blue-700 hover:text-blue-900">
+            <i class="fas fa-home mr-2"></i>
+            Home
+          </a>
+        </li>
+        <li>
+          <div class="flex items-center">
+            <i class="fas fa-chevron-right text-blue-500 mx-1"></i>
+            <a href="blog.html" class="text-blue-700 hover:text-blue-900">Blog</a>
+          </div>
+        </li>
+        <li>
+          <div class="flex items-center">
+            <i class="fas fa-chevron-right text-blue-500 mx-1"></i>
+            <span class="text-blue-500">Article</span>
+          </div>
+        </li>
+      </ol>
+    </nav>
+
+    <!-- Article Header -->
+    <article class="bg-white rounded-3xl shadow-2xl overflow-hidden">
+      <img alt="New mobile app features" class="w-full h-64 md:h-80 object-cover" height="400" loading="lazy" src="https://storage.googleapis.com/a1aa/image/3ba9c836-bb5d-4da6-d8ad-bb06a5b7e9a7.jpg" width="800">
+      
+      <div class="p-6 sm:p-8">
+        <div class="flex flex-wrap items-center gap-3 mb-4">
+          <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-semibold">Technology</span>
+          <span class="text-sm text-blue-700">June 10, 2024</span>
+          <span class="text-sm text-blue-700">5 min read</span>
+        </div>
+        
+        <h1 class="text-2xl sm:text-3xl font-bold text-blue-900 mb-4">New Mobile App Features for Field Officers</h1>
+        
+        <div class="flex items-center mb-6">
+          <img alt="Author photo" class="w-10 h-10 rounded-full object-cover border-2 border-sea-blue-700 mr-3" height="40" src="https://storage.googleapis.com/a1aa/image/84c5b122-b581-4a85-3cd5-ad72b1becd62.jpg" width="40">
+          <div>
+            <p class="font-semibold text-blue-900">Kwame Mensah</p>
+            <p class="text-sm text-blue-700">Chief Inspector, ICT Department</p>
+          </div>
+        </div>
+        
+        <div class="prose prose-blue max-w-none">
+          <p class="text-blue-800 leading-relaxed mb-6">
+            The Ghana Police Service is excited to announce the latest enhancements to our mobile application, designed specifically to support our field officers in their daily operations. These new features represent a significant step forward in our digital transformation journey, enabling officers to access critical information and perform duties more efficiently while on the move.
+          </p>
+          
+          <h2 class="text-xl font-bold text-blue-900 mt-8 mb-4">Real-Time Case Updates</h2>
+          <p class="text-blue-800 leading-relaxed mb-6">
+            One of the most significant additions to our mobile app is the real-time case update feature. Field officers can now receive instant notifications about case developments, status changes, and new assignments directly on their mobile devices. This ensures that officers are always informed about the latest developments in cases they are working on, improving response times and overall efficiency.
+          </p>
+          
+          <h2 class="text-xl font-bold text-blue-900 mt-8 mb-4">Enhanced Communication Tools</h2>
+          <p class="text-blue-800 leading-relaxed mb-6">
+            The updated app includes enhanced communication tools that allow officers to securely communicate with their colleagues and supervisors. Features include encrypted messaging, voice calls, and the ability to share images and documents related to ongoing investigations. These tools are designed to facilitate better coordination between officers, especially during critical operations.
+          </p>
+          
+          <h2 class="text-xl font-bold text-blue-900 mt-8 mb-4">Digital Evidence Collection</h2>
+          <p class="text-blue-800 leading-relaxed mb-6">
+            Field officers can now collect and submit digital evidence directly through the mobile app. This includes the ability to take photos, record videos, and capture audio statements from witnesses. All evidence is automatically tagged with location data, time stamps, and officer information, ensuring a clear chain of custody for all digital evidence collected in the field.
+          </p>
+          
+          <h2 class="text-xl font-bold text-blue-900 mt-8 mb-4">Offline Functionality</h2>
+          <p class="text-blue-800 leading-relaxed mb-6">
+            Recognizing that officers often work in areas with limited or no internet connectivity, we have implemented robust offline functionality. Officers can access critical information, complete forms, and collect evidence even when offline. Once connectivity is restored, the app automatically syncs all data with the central system, ensuring no information is lost.
+          </p>
+          
+          <h2 class="text-xl font-bold text-blue-900 mt-8 mb-4">Improved Navigation and Mapping</h2>
+          <p class="text-blue-800 leading-relaxed mb-6">
+            The updated app includes enhanced navigation and mapping features, helping officers reach their destinations more efficiently. Integrated GPS functionality provides turn-by-turn directions to incident locations, while real-time traffic updates help officers avoid delays and choose the fastest routes.
+          </p>
+          
+          <h2 class="text-xl font-bold text-blue-900 mt-8 mb-4">Training and Support</h2>
+          <p class="text-blue-800 leading-relaxed mb-6">
+            To ensure that all officers can make the most of these new features, comprehensive training sessions have been conducted across all police stations. Additionally, the app includes a built-in help section with tutorials and frequently asked questions, providing officers with immediate assistance when needed.
+          </p>
+          
+          <h2 class="text-xl font-bold text-blue-900 mt-8 mb-4">Future Developments</h2>
+          <p class="text-blue-800 leading-relaxed mb-6">
+            This update is just the beginning of our plans to enhance the mobile capabilities of our police force. Future developments will include advanced analytics tools, integration with body-worn cameras, and artificial intelligence-powered features to assist officers in their duties.
+          </p>
+          
+          <p class="text-blue-800 leading-relaxed">
+            The Ghana Police Service remains committed to leveraging technology to improve policing in Ghana. These new mobile app features represent another step forward in our mission to provide our officers with the tools they need to serve and protect the citizens of Ghana effectively.
+          </p>
+        </div>
+        
+        <div class="mt-8 pt-6 border-t border-blue-200">
+          <div class="flex flex-wrap items-center justify-between gap-4">
+            <div class="flex items-center space-x-4">
+              <button class="text-blue-600 hover:text-blue-800">
+                <i class="fas fa-heart mr-1"></i> Like
+              </button>
+              <button class="text-blue-600 hover:text-blue-800">
+                <i class="fas fa-share mr-1"></i> Share
+              </button>
+            </div>
+            <div class="flex items-center space-x-2 text-sm text-blue-700">
+              <i class="fas fa-eye"></i>
+              <span>1,245 views</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Author Bio -->
+    <section class="bg-white rounded-3xl shadow-2xl p-6">
+      <div class="flex items-start">
+        <img alt="Author photo" class="w-16 h-16 rounded-full object-cover border-2 border-sea-blue-700 mr-4" height="64" src="https://storage.googleapis.com/a1aa/image/84c5b122-b581-4a85-3cd5-ad72b1becd62.jpg" width="64">
+        <div>
+          <h3 class="text-lg font-bold text-blue-900">About the Author</h3>
+          <p class="text-blue-800">Chief Inspector Kwame Mensah is the head of the ICT Department at the Ghana Police Service. With over 15 years of experience in law enforcement technology, he has been instrumental in driving the digital transformation of the police service.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Articles -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-bold text-blue-900">Related Articles</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+          <img alt="Community policing event" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/5e009176-94ad-4d2f-7d68-d4deea0b9bde.jpg" width="400">
+          <div class="p-6">
+            <div class="text-sm text-blue-600 mb-2">
+              <span>June 5, 2024</span>
+              <span class="mx-2">•</span>
+              <span>Community</span>
+            </div>
+            <h3 class="text-lg font-semibold text-blue-900 mb-2">Community Policing Initiative Launches in Kumasi</h3>
+            <p class="text-blue-800 mb-4">Learn about our new community engagement program aimed at building stronger relationships between police and local communities.</p>
+            <a href="blog-detail.html?id=community-policing" class="text-sea-blue-700 font-semibold hover:text-sea-blue-800 transition">Read More →</a>
+          </div>
+        </article>
+        
+        <article class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+          <img alt="Cybercrime prevention" class="w-full h-48 object-cover" height="250" loading="lazy" src="https://storage.googleapis.com/a1aa/image/c12b0ef1-de59-4ba0-95d3-671bcb5e366c.jpg" width="400">
+          <div class="p-6">
+            <div class="text-sm text-blue-600 mb-2">
+              <span>May 28, 2024</span>
+              <span class="mx-2">•</span>
+              <span>Safety Tips</span>
+            </div>
+            <h3 class="text-lg font-semibold text-blue-900 mb-2">Protecting Yourself from Online Scams</h3>
+            <p class="text-blue-800 mb-4">Essential tips and strategies to help citizens protect themselves from increasingly sophisticated online fraud and scams.</p>
+            <a href="blog-detail.html?id=online-scams" class="text-sea-blue-700 font-semibold hover:text-sea-blue-800 transition">Read More →</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Comments Section -->
+    <section class="bg-white rounded-3xl shadow-2xl p-6">
+      <h2 class="text-2xl font-bold text-blue-900 mb-6">Comments</h2>
+      
+      <div class="space-y-6 mb-8">
+        <div class="border-b border-blue-100 pb-6">
+          <div class="flex items-start mb-4">
+            <img alt="Commenter" class="w-10 h-10 rounded-full object-cover border-2 border-sea-blue-700 mr-3" height="40" src="https://storage.googleapis.com/a1aa/image/c739d7d7-dc0f-4385-5e80-c5e4f04199b4.jpg" width="40">
+            <div class="flex-grow">
+              <div class="flex items-center justify-between">
+                <h4 class="font-semibold text-blue-900">Abena Owusu</h4>
+                <span class="text-sm text-blue-700">June 12, 2024</span>
+              </div>
+              <p class="text-blue-800 mt-2">These new features are a game-changer for us in the field. The offline functionality has been particularly helpful in areas with poor network coverage.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="border-b border-blue-100 pb-6">
+          <div class="flex items-start mb-4">
+            <img alt="Commenter" class="w-10 h-10 rounded-full object-cover border-2 border-sea-blue-700 mr-3" height="40" src="https://storage.googleapis.com/a1aa/image/8e905564-9ea9-4546-4e9b-d8bea913d29b.jpg" width="40">
+            <div class="flex-grow">
+              <div class="flex items-center justify-between">
+                <h4 class="font-semibold text-blue-900">Yaw Boateng</h4>
+                <span class="text-sm text-blue-700">June 11, 2024</span>
+              </div>
+              <p class="text-blue-800 mt-2">The enhanced communication tools have made it much easier to coordinate with my team during operations. Great work by the ICT department!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <h3 class="text-lg font-semibold text-blue-900 mb-4">Leave a Comment</h3>
+        <form class="space-y-4">
+          <div>
+            <label class="block mb-2 font-semibold text-blue-900" for="name">Name</label>
+            <input type="text" id="name" class="w-full rounded-lg border border-blue-300 bg-white py-2 px-4 text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your name">
+          </div>
+          <div>
+            <label class="block mb-2 font-semibold text-blue-900" for="email">Email</label>
+            <input type="email" id="email" class="w-full rounded-lg border border-blue-300 bg-white py-2 px-4 text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your email">
+          </div>
+          <div>
+            <label class="block mb-2 font-semibold text-blue-900" for="comment">Comment</label>
+            <textarea id="comment" rows="4" class="w-full rounded-lg border border-blue-300 bg-white py-2 px-4 text-blue-900 focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Your comment"></textarea>
+          </div>
+          <button type="submit" class="bg-sea-blue-700 hover:bg-sea-blue-800 text-white font-semibold px-6 py-2 rounded-lg shadow-lg transition">
+            Post Comment
+          </button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer Component -->
+  <footer class="bg-blue-900 text-blue-200 py-8 mt-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Ghana Police Management System</h4>
+          <p class="text-sm">Empowering Ghana's Police Force with Next-Gen Management</p>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Quick Links</h4>
+          <ul class="space-y-2">
+            <li><a href="index.html" class="text-sm hover:text-yellow-300 transition">Home</a></li>
+            <li><a href="officers.html" class="text-sm hover:text-yellow-300 transition">Officers</a></li>
+            <li><a href="cases.html" class="text-sm hover:text-yellow-300 transition">Cases</a></li>
+            <li><a href="fleet.html" class="text-sm hover:text-yellow-300 transition">Fleet</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Resources</h4>
+          <ul class="space-y-2">
+            <li><a href="about.html" class="text-sm hover:text-yellow-300 transition">About Us</a></li>
+            <li><a href="blog.html" class="text-sm hover:text-yellow-300 transition">Blog</a></li>
+            <li><a href="reports.html" class="text-sm hover:text-yellow-300 transition">Reports</a></li>
+            <li><a href="contact.html" class="text-sm hover:text-yellow-300 transition">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-bold text-white mb-4">Connect With Us</h4>
+          <div class="flex space-x-4 text-yellow-400">
+            <a aria-label="Facebook" class="hover:text-yellow-300 transition" href="https://www.facebook.com/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-facebook fa-lg"></i>
+            </a>
+            <a aria-label="Twitter" class="hover:text-yellow-300 transition" href="https://twitter.com/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-twitter fa-lg"></i>
+            </a>
+            <a aria-label="LinkedIn" class="hover:text-yellow-300 transition" href="https://www.linkedin.com/company/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-linkedin fa-lg"></i>
+            </a>
+            <a aria-label="Instagram" class="hover:text-yellow-300 transition" href="https://www.instagram.com/ghanapolice" rel="noopener noreferrer" target="_blank">
+              <i class="fab fa-instagram fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-blue-800 mt-8 pt-6 text-center">
+        <p class="text-sm">© 2024 Ghana Police Management System. All rights reserved.</p>
+        <p class="text-xs mt-2 text-blue-400">Designed and developed for the Ghana Police Service</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript File -->
+  <script src="app.js"></script>
+</body>
+</html>
